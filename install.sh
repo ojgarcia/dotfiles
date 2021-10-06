@@ -8,9 +8,10 @@ if ! command -v ag &> /dev/null; then
   sudo apt-get install -y silversearcher-ag
 fi
 
-ln -sf ~/dotfiles/vim.config/.* ~/
-ln -sf ~/dotfiles/vim.config/plug.vim  ~/.vim/autoload/
-ln -sf ~/dotfiles/nvim.config ~/.config/nvim
+ln -svf ~/dotfiles/vim.config/.* ~/
+mkdir -p ~/.vim/autoload/
+ln -svf ~/dotfiles/vim.config/plug.vim  ~/.vim/autoload/
+ln -svf ~/dotfiles/nvim.config ~/.config/nvim
 
-ln -sf ~/dotfiles/tmux.config/.* ~/
+ln -svf ~/dotfiles/tmux.config/.* ~/
 
