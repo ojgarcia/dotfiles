@@ -1,0 +1,11 @@
+if !exists('g:vscode')
+  Plug 'preservim/nerdtree'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'tpope/vim-dispatch'
+  Plug 'wsdjeg/vim-fetch'
+  Plug 'radenling/vim-dispatch-neovim'
+else
+  UnPlug 'tpope/vim-fugitive'
+  UnPlug 'dense-analysis/ale'
+endif
+Plug 'Shopify/shadowenv.vim'
