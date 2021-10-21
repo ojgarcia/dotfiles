@@ -1,5 +1,26 @@
 {
-  "solargraph.commandPath": "scripts/solargraph-wrapper",
   "languageserver": {
+    "sorbet": {
+      "command": "srb",
+      "args": [
+        "tc",
+        "--typed",
+        "true",
+        "--enable-all-experimental-lsp-features",
+        "--lsp",
+        "--disable-watchman",
+        "--dir",
+        "."
+      ],
+      "filetypes": ["ruby"],
+      "rootPatterns": ["sorbet/config"],
+      "initializationOptions": {},
+      "settings": {}
+    },
+    "rubocop": {
+      "command": "bundle",
+      "args": ["exec", "rubocop-lsp"],
+      "filetypes": ["ruby"]
+    }
   }
 }

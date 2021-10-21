@@ -4,6 +4,7 @@ if !exists('g:vscode')
   Plug 'tpope/vim-dispatch'
   Plug 'wsdjeg/vim-fetch'
   Plug 'radenling/vim-dispatch-neovim'
+  Plug 'Shopify/vim-sorbet', { 'branch': 'main' }
 else
   UnPlug 'tpope/vim-fugitive'
   UnPlug 'dense-analysis/ale'
