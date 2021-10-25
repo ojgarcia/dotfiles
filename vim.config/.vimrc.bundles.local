@@ -1,3 +1,5 @@
+UnPlug 'dense-analysis/ale'
+
 if !exists('g:vscode')
   Plug 'preservim/nerdtree'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -5,8 +7,8 @@ if !exists('g:vscode')
   Plug 'wsdjeg/vim-fetch'
   Plug 'radenling/vim-dispatch-neovim'
   Plug 'Shopify/vim-sorbet', { 'branch': 'main' }
+  Plug 'altercation/vim-colors-solarized'
 else
   UnPlug 'tpope/vim-fugitive'
-  UnPlug 'dense-analysis/ale'
 endif
 Plug 'Shopify/shadowenv.vim'

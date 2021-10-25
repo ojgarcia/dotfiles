@@ -28,3 +28,8 @@ set ignorecase
 set smartcase
 set incsearch
 set nohlsearch
+
+"solarized config
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
