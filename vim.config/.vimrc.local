@@ -5,7 +5,7 @@ if !exists('g:vscode')
 
   nnoremap <leader>t :.Rails<CR>
 
-  let g:ale_fix_on_save = 1
+  nnoremap <leader>sw :Ag <C-R>=expand("<cword>")<CR><CR>
 
   " Local coc config
   if filereadable($HOME . "/.vimrc.coc")
@@ -17,10 +17,8 @@ else
   nnoremap <leader>n <Cmd>call VSCodeNotify('workbench.view.explorer')<CR>
   nnoremap ] <Cmd>call VSCodeNotify('workbench.files.action.showActiveFileInExplorer')<CR>
 
-
   nnoremap <C-h> <Cmd>call VSCodeNotify('workbench.action.focusPreviousGroup')<CR>
   nnoremap <C-j> <Cmd>call VSCodeNotify('workbench.action.focusNextGroup')<CR>
-
 
 endif
 

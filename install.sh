@@ -1,4 +1,5 @@
 #!/bin/zsh
+ALIASRC="~/.aliasrc"
 
 if ! command -v fzf &> /dev/null; then
   sudo apt-get install -y fzf
@@ -15,3 +16,6 @@ ln -svf ~/dotfiles/nvim.config ~/.config/nvim
 
 ln -svf ~/dotfiles/tmux.config/.* ~/
 
+[ ! -f "$ALIASRC" ] && echo "\nsource $ALIASRC" >> ~/.zshrc
+
+ln -svf ~/dotfiles/zsh.config/.aliasrc ~/.aliasrc
