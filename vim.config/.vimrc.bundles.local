@@ -2,6 +2,7 @@ UnPlug 'dense-analysis/ale'
 
 if !exists('g:vscode')
   Plug 'preservim/nerdtree'
+  Plug 'Xuyuanp/nerdtree-git-plugin',
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'tpope/vim-dispatch'
   Plug 'wsdjeg/vim-fetch'

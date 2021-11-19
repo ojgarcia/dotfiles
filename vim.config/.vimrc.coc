@@ -170,9 +170,9 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " Setup Prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
+"  \ 'coc-solargraph',
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-prettier',
-  \ 'coc-json',
-  \ 'coc-solargraph'
+  \ 'coc-json'
   \ ]

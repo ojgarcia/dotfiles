@@ -19,3 +19,5 @@ ln -svf ~/dotfiles/tmux.config/.* ~/
 [ ! -f "$ALIASRC" ] && echo "\nsource $ALIASRC" >> ~/.zshrc
 
 ln -svf ~/dotfiles/zsh.config/.aliasrc ~/.aliasrc
+
+nvim --headless +PlugInstall +qall
