@@ -1,6 +1,7 @@
 #!/bin/zsh
 ALIASRC="~/.aliasrc"
 
+# on mac i added fzf node the_silver_searcher nvim tmux
 if ! command -v fzf &> /dev/null; then
   sudo apt-get install -y fzf
 fi

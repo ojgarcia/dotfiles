@@ -1,6 +1,5 @@
 {
-  "codeLens.enable": true,
-  "coc.preferences.formatOnSaveFiletypes": ["ruby", "eruby", "javascript"],
+  "coc.preferences.formatOnSaveFiletypes": ["ruby", "eruby", "javascript", "typescriptreact"],
   "languageserver": {
     "sorbet": {
       "command": "srb",
