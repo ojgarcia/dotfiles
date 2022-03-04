@@ -2,6 +2,6 @@ export EDITOR=vim
 
 alias vim="nvim"
 
-if [[ $SSH_CLIENT && !$TMUX ]]; then
+if [ $SSH_CLIENT ] && [ ! $TMUX  ]; then
   tmux attach || tmux
 fi

@@ -9,6 +9,7 @@ if !exists('g:vscode')
   Plug 'radenling/vim-dispatch-neovim'
   Plug 'Shopify/vim-sorbet', { 'branch': 'main' }
   Plug 'altercation/vim-colors-solarized'
+  Plug 'github/copilot.vim'
 else
   UnPlug 'tpope/vim-fugitive'
 endif
