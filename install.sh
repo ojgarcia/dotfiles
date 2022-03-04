@@ -1,5 +1,5 @@
 #!/bin/zsh
-ALIASRC="~/.aliasrc"
+ZSHRC_LOCAL="~/.zshrc.local"
 
 # on mac i added fzf node the_silver_searcher nvim tmux
 if ! command -v fzf &> /dev/null; then
@@ -17,8 +17,8 @@ ln -svf ~/dotfiles/nvim.config ~/.config/nvim
 
 ln -svf ~/dotfiles/tmux.config/.* ~/
 
-[ ! -f "$ALIASRC" ] && echo "\nsource $ALIASRC" >> ~/.zshrc
+[ ! -f $ZSHRC_LOCAL ] && echo "\nsource $ZSHRC_LOCAL" >> ~/.zshrc
 
-ln -svf ~/dotfiles/zsh.config/.aliasrc ~/.aliasrc
+ln -svf ~/dotfiles/zsh.config/.zshrc.local ~/.zshrc.local
 
 nvim --headless +PlugInstall +qall
