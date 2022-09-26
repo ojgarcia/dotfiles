@@ -3,5 +3,5 @@ export EDITOR=vim
 alias vim="nvim"
 
 if [ $SSH_CLIENT ] && [ ! $TMUX  ]; then
-  tmux attach || tmux
+  tmux new-session -A -s spin
 fi

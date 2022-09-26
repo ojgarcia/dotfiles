@@ -1,5 +1,8 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["ruby", "eruby", "javascript", "typescriptreact"],
+  "coc.preferences.formatOnSaveFiletypes": ["ruby", "eruby", "rust", "javascript", "typescriptreact"],
+  "rust-analyzer.inlayHints.enable": true,
+  "rust-analyzer.lens.enable": true,
+  "codeLens.enable": true,
   "languageserver": {
     "sorbet": {
       "command": "srb",
@@ -9,24 +12,40 @@
         "true",
         "--enable-all-experimental-lsp-features",
         "--lsp",
-        "--disable-watchman",
-        "--dir",
-        "."
+        "--disable-watchman"
       ],
-      "filetypes": [],
+      "filetypes": ["ruby"],
       "rootPatterns": ["sorbet/config"],
       "initializationOptions": {},
       "settings": {}
     },
-    "rubocop": {
+    "ruby-lsp": {
       "command": "bundle",
-      "args": ["exec", "rubocop-lsp"],
-      "filetypes": ["ruby"]
+      "args": ["exec", "ruby-lsp"],
+      "filetypes": ["ruby", "eruby"],
+      "initializationOptions": {
+        "enabledFeatures": [
+          "documentHighlights",
+          "documentLink",
+          "documentSymbols",
+          "foldingRanges",
+          "selectionRanges",
+          "semanticHighlighting",
+          "formatting",
+          "diagnostics",
+          "codeActions",
+          "onTypeFormatting"
+        ]
+      }
+    },
+    "rubocop": {
+      "command": "rubocop-lsp",
+      "filetypes": []
     },
     "solargraph-local": {
-      "command": "bundle",
-      "args": ["exec", "solargraph", "stdio"],
-      "filetypes": ["ruby"]
+      "command": "solargraph",
+      "args": ["stdio"],
+      "filetypes": []
     }
   }
 }
