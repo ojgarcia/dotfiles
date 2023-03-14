@@ -1,4 +1,4 @@
-function plugins (use) 
+local function plugins(use)
   use {
     "folke/which-key.nvim",
     config = function()
@@ -7,7 +7,12 @@ function plugins (use)
     end
   }
   use 'preservim/nerdtree'
-  use 'github/copilot.vim'
+  use { 'github/copilot.vim',
+    config = function()
+      vim.cmd([[imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")]])
+      vim.g.copilot_no_tab_map = true
+    end
+  }
 end
 
 return plugins
