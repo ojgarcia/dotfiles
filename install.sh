@@ -17,4 +17,5 @@ ln -svf ~/dotfiles/tmux.config/.* ~/
 
 ln -svf ~/dotfiles/zsh.config/.zshrc.local ~/.zshrc.local
 
-nvim --headless +PackerSync +qall
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+nvim --headless -c "MasonInstall rust-analyzer ruby-lsp sorbet lua-language-server" -c qall
