@@ -1,4 +1,9 @@
 local function plugins(use)
+  use 'preservim/nerdtree'
+  use 'kdheepak/lazygit.nvim'
+  use 'wsdjeg/vim-fetch'
+  use 'tpope/vim-dispatch'
+
   use {
     "folke/which-key.nvim",
     config = function()
@@ -6,16 +11,12 @@ local function plugins(use)
       vim.o.timeoutlen = 300
     end
   }
-  use 'preservim/nerdtree'
   use { 'github/copilot.vim',
     config = function()
       vim.cmd([[imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")]])
       vim.g.copilot_no_tab_map = true
     end
   }
-  use 'kdheepak/lazygit.nvim'
-  use 'wsdjeg/vim-fetch'
-  use 'tpope/vim-dispatch'
   use { 'vim-test/vim-test',
     config = function()
       --nmap <silent> <leader>t :TestNearest<CR>
